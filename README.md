@@ -23,6 +23,6 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 
-上記コマンドでDocker composeをインストール
+上記2つのコマンドでDocker composeをインストール
 
 
