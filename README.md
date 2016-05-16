@@ -30,6 +30,12 @@ ping 192.168.0.2
 
 ## Dockerのインストールと起動
 
+```
+curl -sSL https://get.docker.com/ | sh
+```
+上記コマンドでDockerをインストールできる。
+
+
 
 
 ## Docker compose
