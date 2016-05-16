@@ -6,14 +6,23 @@
 <br>
 以下は、主に「さくらのクラウド」でのハンズオンで使用するコマンドとなります。
 
-**ローカルネットワークを組む
+## ローカルネットワークを組む
 
 ```
 ifconfig –a
 ```
 上記コマンドで「eth01」が登録されているか確認する。
 
+## Docker compose
+
+```
+curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+chmod +x /usr/local/bin/docker-compose 
+
+```
 
 
+上記コマンドでDocker composeをインストール
 
 
