@@ -51,6 +51,19 @@ dockerrun -p 80:2368 -d ghost
 上記コマンドでghostをスタートする。
 
 
+```
+docker ps
+```
+Dockerのプロセスを確認する
+
+
+```
+docker stop (CONTANER ID)
+```
+
+Dockerのコンテナを止める
+
+
 
 ## Docker compose
 
@@ -62,7 +75,33 @@ curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose
 chmod +x /usr/local/bin/docker-compose 
 ```
 
-
 上記2つのコマンドでDocker composeをインストール
+
+
+```
+gitclone https://github.com/wslash/zabbix3.git
+```
+
+上記のコマンドでyamlをこのページから取ってくる。
+
+
+```
+cd zabbix3
+```
+作成されたzabbix3のフォルダに移動する。
+
+
+```
+docker-compose pull
+```
+
+zabbixに必要なファイルを取ってくる
+
+
+```
+docker-compose up -d
+
+```
+上記のコマンドで「docker　compose」を利用して zabbixを立ち上げる
 
 
