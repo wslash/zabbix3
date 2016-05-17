@@ -48,7 +48,7 @@ systemctlstart docker
 dockerrun -p 80:2368 -d ghost
 ```
 
-ghostをスタートする。
+上記コマンドでghostをスタートする。
 
 
 
