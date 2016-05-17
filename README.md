@@ -37,6 +37,20 @@ curl -sSL https://get.docker.com/ | sh
 
 
 
+```
+systemctlstart docker
+```
+上記コマンドでDockerを起動する
+
+
+
+```
+dockerrun -p 80:2368 -d ghost
+```
+
+ghostをスタートする。
+
+
 
 ## Docker compose
 
