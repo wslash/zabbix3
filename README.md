@@ -38,14 +38,14 @@ curl -sSL https://get.docker.com/ | sh
 
 
 ```
-systemctlstart docker
+systemctl start docker
 ```
 上記コマンドでDockerを起動する
 
 
 
 ```
-dockerrun -p 80:2368 -d ghost
+docker run -p 80:2368 -d ghost
 ```
 
 上記コマンドでghostをスタートする。
