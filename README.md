@@ -79,7 +79,7 @@ chmod +x /usr/local/bin/docker-compose
 
 
 ```
-gitclone https://github.com/wslash/zabbix3.git
+git clone https://github.com/wslash/zabbix3.git
 ```
 
 上記のコマンドでyamlをこのページから取ってくる。
