@@ -104,4 +104,14 @@ docker-compose up -d
 ```
 上記のコマンドで「docker　compose」を利用して zabbixを立ち上げる
 
+## wordpress
 
+```
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=(パスワード) -d mysql
+```
+
+
+```
+docker run --name wordpress --link mysql:mysql -p 80:80 wordpress
+
+```
