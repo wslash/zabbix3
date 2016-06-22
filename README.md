@@ -110,7 +110,10 @@ vi /var/www/html/index.php
 
 
 ■フォルダを移動
+
+```
 cd /var/www/html 
+```
 
 ■WordPressファイルを持ってくる
 
