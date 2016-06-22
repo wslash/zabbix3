@@ -28,6 +28,114 @@ ping 192.168.0.2
 上記コマンドで、Pingを打つ。CTRL + Cで止まる。
 
 
+## WordPressをインストールする。
+
+■Apache、php mysqlのインストール
+
+```
+yum install -y httpd php mysql-server php-mysql 
+```
+
+■Apacheの起動
+
+```
+service httpd start
+```
+
+■MySQLの起動
+
+```
+service mysqld start
+```
+
+■MySQLのユーザ設定
+```
+/usr/bin/mysqladmin -u root password 'パスワード' 
+```
+上記のパスワードの部分を半角英数字のパスワードに置き換える。
+
+■mysqlの中に入る
+```
+mysql -u root -p
+```
+
+■データベース「wp」を作る。
+
+```
+create database wp;
+```
+
+■データベースにwpにアクセスするユーザを作成する。
+
+```
+grant all privileges on wp.* to wp@localhost identified by'パスワード'; 
+```
+上記のパスワードの部分を半角英数字のパスワードに置き換える。
+
+
+■\qでMySQLを抜ける
+
+```
+\q 
+```
+
+
+■PHPの設定
+
+```
+vi /etc/php.ini
+```
+
+■VIで下記の部分を編集
+
+date.timezone = "Asia/Tokyo" 
+
+■Apacheの再起動
+
+
+```
+service httpd restart
+
+```
+
+■PHPの確認
+
+
+```
+vi /var/www/html/index.php
+
+```
+下記を入力する
+<?php phpinfo() ?> 
+
+
+■フォルダを移動
+cd /var/www/html 
+
+■WordPressファイルを持ってくる
+
+```
+wget https://ja.wordpress.org/latest-ja.tar.gz
+```
+
+■ファイルを解凍する
+
+```
+tar zxf latest-ja.tar.gz
+```
+
+■ファイルの所有者の変更
+```
+chown -R apache:apache wordpress
+```
+
+■ブラウザの確認
+ブラウザのタブを1枚開いて「IPアドレス/wordpress/」を入力
+
+
+
+
+
 ## Dockerのインストールと起動
 
 ```
@@ -104,7 +212,7 @@ docker-compose up -d
 ```
 上記のコマンドで「docker　compose」を利用して zabbixを立ち上げる
 
-## wordpress
+## wordpressをDockerで作る
 
 ```
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=(パスワード) -d mysql
