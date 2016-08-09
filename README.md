@@ -178,36 +178,63 @@ Dockerのコンテナを止める
 
 ## wordpressをDockerで作る
 
-WordPressのイメージを持ってくる
+
 ```
 docker run wordpress
 
 ```
+WordPressのイメージを持ってくる
 
-MySQLのイメージを持ってくる。
+
 
 ```
 docker pull mysql
 
 ```
+MySQLのイメージを持ってくる。
 
 
-MySQLの設定
 ```
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=(パスワード) -d mysql
 ```
+MySQLの設定
 
-WordPressを動かす
+
+
 ```
 docker run --name wordpress --link mysql:mysql -p 80:80 wordpress
 
 ```
+WordPressを動かす
 
-デタッチモードで動かす
 ```
 docker run --name wordpress2 -d --link mysql:mysql -p 80:80 wordpress
 
 ```
+デタッチモードでWordPressを動かす
+
+
+## Docker composeでRocket.Chatを動かす
+
+```
+curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+```
+
+```
+chmod +x /usr/local/bin/docker-compose 
+```
+
+上記2つのコマンドでDocker composeをインストール
+
+
+```
+https://github.com/zembutsu/sakura-cloud-hands-on.git
+```
+
+上記のコマンドでyamlをこのページから取ってくる。
+
+
+
 
 
 
@@ -229,6 +256,14 @@ git clone https://github.com/wslash/zabbix3.git
 ```
 
 上記のコマンドでyamlをこのページから取ってくる。
+
+
+
+```
+cd sakura-cloud-hands-on/rocketchat
+```
+作成されたフォルダに移動する。
+
 
 
 ```
