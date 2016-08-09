@@ -233,8 +233,23 @@ https://github.com/zembutsu/sakura-cloud-hands-on.git
 
 上記のコマンドでyamlをこのページから取ってくる。
 
+```
+cd sakura-cloud-hands-on/rocketchat
+```
+作成されたフォルダに移動する。
+
+```
+docker-compose pull
+```
+Rocket.Chatに必要なファイルを取ってくる
 
 
+```
+docker-compose up -d
+
+```
+
+上記コマンドでRocket.Chatを動かす
 
 
 
@@ -260,16 +275,9 @@ git clone https://github.com/wslash/zabbix3.git
 
 
 ```
-cd sakura-cloud-hands-on/rocketchat
-```
-作成されたフォルダに移動する。
-
-
-
-```
 cd zabbix3
 ```
-作成されたzabbix3のフォルダに移動する。
+作成されたフォルダに移動する。
 
 
 ```
