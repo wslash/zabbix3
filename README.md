@@ -176,7 +176,42 @@ Dockerのコンテナを止める
 
 
 
-## Docker compose
+## wordpressをDockerで作る
+
+WordPressのイメージを持ってくる
+```
+docker run wordpress
+
+```
+
+MySQLのイメージを持ってくる。
+
+```
+docker pull mysql
+
+```
+
+
+MySQLの設定
+```
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=(パスワード) -d mysql
+```
+
+WordPressを動かす
+```
+docker run --name wordpress --link mysql:mysql -p 80:80 wordpress
+
+```
+
+デタッチモードで動かす
+```
+docker run --name wordpress2 -d --link mysql:mysql -p 80:80 wordpress
+
+```
+
+
+
+## Docker composeでzabbixを動かす
 
 ```
 curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
@@ -215,14 +250,4 @@ docker-compose up -d
 ```
 上記のコマンドで「docker　compose」を利用して zabbixを立ち上げる
 
-## wordpressをDockerで作る
 
-```
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=(パスワード) -d mysql
-```
-
-
-```
-docker run --name wordpress --link mysql:mysql -p 80:80 wordpress
-
-```
