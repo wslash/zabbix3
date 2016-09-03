@@ -228,7 +228,7 @@ chmod +x /usr/local/bin/docker-compose
 
 
 ```
-https://github.com/zembutsu/sakura-cloud-hands-on.git
+git clone https://github.com/zembutsu/sakura-cloud-hands-on.git
 ```
 
 上記のコマンドでyamlをこのページから取ってくる。
