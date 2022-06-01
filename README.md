@@ -11,13 +11,14 @@
 
 
 ```
-ifconfig –a
+ip a
 ```
 上記コマンドで「eth1」が登録されているか確認する。
 
 
 ```
-ifconfig eth1 192.168.0.1/24
+ip addr add 192.168.0.1/24 dev eth1
+
 ```
 
 上記コマンドで「eth1」のIPアドレスを設定する。
@@ -26,6 +27,7 @@ ifconfig eth1 192.168.0.1/24
 ping 192.168.0.2
 ```
 上記コマンドで、Pingを打つ。CTRL + Cで止まる。
+
 
 
 ## WordPressをインストールする。
